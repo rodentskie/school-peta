@@ -55,6 +55,8 @@ D7 ─► LED b3 ─[1k]─ GND
 
 ```cpp
 // Activity 04 - 4-bit Binary Counter
+// Tinkercad-compatible: the button update logic is a member function of
+// Button, so the auto-prototype step never references Button before it exists.
 const int LED_PINS[4] = {4, 5, 6, 7};   // bit0 .. bit3
 const int UP_PIN = 2;
 const int DOWN_PIN = 3;
@@ -71,31 +73,31 @@ struct Button {
   unsigned long pressedAt;
   bool longFired;
   unsigned long nextRepeat;
+
+  int update() {
+    int raw = digitalRead(pin);
+    unsigned long now = millis();
+    if (raw != lastRaw) {
+      lastRaw = raw;
+      changedAt = now;
+    }
+    if (now - changedAt > 20 && raw != stable) {
+      stable = raw;
+      if (raw == LOW) {
+        pressedAt = now;
+        longFired = false;
+        return EV_PRESS;
+      }
+      return EV_RELEASE;
+    }
+    return EV_NONE;
+  }
 };
 
 Button upBtn = {UP_PIN, HIGH, HIGH, 0, 0, false, 0};
 Button downBtn = {DOWN_PIN, HIGH, HIGH, 0, 0, false, 0};
 
 int value = 0;
-
-int updateButton(Button &b) {
-  int raw = digitalRead(b.pin);
-  unsigned long now = millis();
-  if (raw != b.lastRaw) {
-    b.lastRaw = raw;
-    b.changedAt = now;
-  }
-  if (now - b.changedAt > 20 && raw != b.stable) {
-    b.stable = raw;
-    if (raw == LOW) {
-      b.pressedAt = now;
-      b.longFired = false;
-      return EV_PRESS;
-    }
-    return EV_RELEASE;
-  }
-  return EV_NONE;
-}
 
 void printBinary(int v) {
   Serial.print("0b");
@@ -131,7 +133,7 @@ void loop() {
   unsigned long now = millis();
 
   // ---- UP: act on release, long-press resets ----
-  int ev = updateButton(upBtn);
+  int ev = upBtn.update();
   if (upBtn.stable == LOW && !upBtn.longFired && now - upBtn.pressedAt >= 1500) {
     upBtn.longFired = true;
     value = 0;
@@ -141,7 +143,7 @@ void loop() {
   if (ev == EV_RELEASE && !upBtn.longFired) changeBy(+1);
 
   // ---- DOWN: act on press, then auto-repeat ----
-  ev = updateButton(downBtn);
+  ev = downBtn.update();
   if (ev == EV_PRESS) {
     changeBy(-1);
     downBtn.nextRepeat = now + 600;
