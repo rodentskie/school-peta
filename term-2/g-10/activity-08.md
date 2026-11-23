@@ -138,8 +138,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Explain in your own words why a single threshold (for example, 375) causes flickering, and how two thresholds solve the problem.
-2. The ring buffer keeps a running `sum`. How many additions does the program do per sample compared with re-adding all 16 values each time?
-3. Why is the buffer pre-filled with the first reading in `setup()`? What would happen at start-up if it were filled with zeros?
-4. Calculate how long the lamp takes to fade from 0 to its brightest value (255).
-5. A street light should not switch off when a car's headlights shine on it for 2 seconds. Modify the logic so that the "bright" condition must be true **continuously for 5 s** before the lamp turns off.
+1. What happens to the lamp LED when you make the light sensor dark in the simulation?
+2. Does the lamp turn on suddenly or slowly? What about turning off?
+3. Move the light slider just a little, back and forth, near the point where the lamp switches. Does the lamp flicker? Describe what you see.
+4. If the 1 kΩ resistor connected to the light sensor is removed, how do you think the lamp will behave?
+5. If the light sensor and its resistor swap places (sensor to GND, resistor to 5V), what will the lamp do when it gets dark?

@@ -191,8 +191,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Write the byte (in binary) needed to show the letter **"E"** (segments a, d, e, f, g).
-2. Calculate the waiting time after steps 1, 5, 10 and 15. Roughly how long does the whole rolling animation last?
-3. After 600 rolls of a fair dice, about how many times should each face appear? Why will the real counts not be exactly equal?
-4. Why must `randomSeed()` use a changing value such as `analogRead()` of an unconnected pin? What would the players notice if it were removed?
-5. Modify the program into a **two-dice** game on the same display: show die 1, pause, show die 2, then print the sum. Count how often each sum (2–12) appears. Which sum is the most common?
+1. Describe what you see and hear when you press the button.
+2. What happens if you press the button again while the dice is still rolling?
+3. What does the display show before the first roll?
+4. What will happen to the display if the resistor on the common pin is removed?
+5. If the wire to segment g (D8) is disconnected, which numbers will look wrong? What will the number 6 look like?

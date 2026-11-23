@@ -163,8 +163,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Using the speed curve, calculate the fan percentage and the PWM value at 25 °C, 28 °C, 31.5 °C and 37 °C.
-2. Draw a graph of fan % vs. temperature from 20 °C to 40 °C, **rising** and then **falling**. Mark where the hysteresis appears.
-3. Why does a DC motor need a kick-start at low PWM values? What would happen at 40 % without it?
-4. In MANUAL mode the overheat warning still works. Why is it important that safety features cannot be switched off by the user?
-5. Replace the straight-line curve with a **lookup table** of 5 points (25→40 %, 28→55 %, 31→70 %, 34→90 %, 35→100 %) and **linear interpolation** between them. Write the function `int curvePercent(float t)`.
+1. What does the motor do when the temperature is below 25 °C? What happens when you raise it above 25 °C?
+2. How does the motor speed change as the temperature goes from 25 °C up to 35 °C?
+3. What happens when you press the button? What controls the motor speed now?
+4. What does the LED do above 40 °C? Does this still happen in MANUAL mode?
+5. What will happen if the transistor's base resistor is removed? What will happen if the temperature sensor is disconnected?

@@ -172,8 +172,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. List all the possible transitions **out of** the ARMED state, and the event that causes each one.
-2. Why does the system have an EXIT_DELAY and an ENTRY_DELAY? What would happen without them?
-3. Why does the ALARM state end after 30 s and return to ARMED instead of DISARMED?
-4. The code uses `return;` right after handling the button. What problem does this prevent in the rest of `loop()`?
-5. Add a **PIN code**: the system can only be disarmed during ENTRY_DELAY or ALARM by pressing the button exactly 3 times within 2 seconds. Describe the variables you need and write the logic.
+1. What does the green LED do after you press the button the first time? What do you hear?
+2. After the system is armed, what happens when motion is detected?
+3. What happens if you press the button during the entry delay? What happens if you do nothing?
+4. What happens if motion is detected while the system is disarmed?
+5. If the PIR sensor's signal wire is disconnected, can the alarm still go off? Why is this dangerous in a real home?

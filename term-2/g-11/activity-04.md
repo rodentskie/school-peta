@@ -199,8 +199,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Calculate the frequency of the `g` key (G4 = 392 Hz) at octave shifts −1, +1 and +2. What happens to the frequency each time the octave goes up by one?
-2. Explain the ring buffer using a drawing: the queue holds 3 notes, `qHead = 62`, `qTail = 1`. Where are the notes stored?
-3. Why do commands like `+` act immediately while notes go into the queue? Give an example where this matters.
-4. Write the note string for the first line of "Twinkle Twinkle Little Star" (C C G G A A G, rest) using this keyboard.
-5. Add a **tempo** command `t` that cycles 80 % → 100 % → 125 % of the note length, applied while playing. Where in the code must the change be made?
+1. What do you hear right after the simulation starts?
+2. Send `asdf` in one line. Do you hear all the notes at the same time or one after another?
+3. Send `1` and then `asdf`, then `4` and `asdf`. What is the difference? What changes when you send `+` before the notes?
+4. Send `r`, play a few notes, send `r` again, then send `p`. What happens?
+5. What will happen to the LED if its resistor is removed? If the buzzer is disconnected, does the LED still show the notes?

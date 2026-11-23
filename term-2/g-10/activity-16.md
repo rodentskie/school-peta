@@ -222,8 +222,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Explain what `strtok()` does. What does each of `cmd`, `a1`, `a2` and `a3` contain after parsing the line `BLINK 2 10 250`?
-2. Why does the interpreter check `lineLen < sizeof(line) - 1` before storing a character? What could happen in memory without this check?
-3. `BLINK 1 4 500` sets `togglesLeft = 8` and `halfPeriod = 250`. Explain these values and calculate how long the blinking lasts.
-4. Why is `runScript()` needed instead of calling `processLine("help")` directly? (Hint: `processLine` changes the text it receives.)
-5. Add a `FADE n from to ms` command that changes the brightness smoothly in the background. Which new fields must be added to `LedTask`?
+1. What do the two LEDs do right after the simulation starts?
+2. Type `ON 1`, then `off 1`. Does it matter if you use capital or small letters?
+3. Type `BLINK 2 10 300`, then quickly type `ON 1`. Do both LEDs work at the same time?
+4. What happens when you type a wrong command, for example `JUMP` or `ON 5`?
+5. If LED 2 is moved from D10 to D7 (a pin without `~`), what happens when you type `PWM 2 60`?

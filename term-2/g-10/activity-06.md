@@ -166,8 +166,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Calculate the speed factor when the potentiometer reads 0, 256, 512, 768 and 1023.
-2. Why does the program use `animTime` instead of `millis()` directly? Explain how this makes "freeze" possible.
-3. Sketch a graph of brightness vs. time for one 1200 ms heartbeat period.
-4. What is a "random walk"? Why does it look more like a real flame than `analogWrite(LED1, random(256))` every 40 ms?
-5. Add a fifth mode, **"SOS strobe"**, that flashes both LEDs in the Morse pattern for SOS. Describe how you would compute the on/off state from `t`.
+1. Describe how the two LEDs look in each of the four modes.
+2. What happens to the animation when you turn the potentiometer?
+3. What happens when you hold the button for more than 1 second? What happens when you do it again?
+4. If LED 1 is moved from D9 to D8 (a pin without the `~` PWM mark), what happens in Breathe mode?
+5. What will happen to LED 2 if its resistor is removed?

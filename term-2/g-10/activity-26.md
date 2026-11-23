@@ -215,8 +215,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Convert 754,321 ms into the `MM:SS.cc` format. Show the steps the `formatTime()` function takes.
-2. Why does the program use `%02lu` and not `%02d` in `sprintf()`? What is the risk of using the wrong format?
-3. A runner's total times at each lap are 62.40 s, 121.90 s and 183.10 s. Calculate the three split times and the differences shown on the LCD.
-4. Explain how the FIFO shift works when the 6th lap is recorded. Which lap is lost?
-5. Add a **"best lap"** indicator: when the selected lap is the fastest one stored, show `*` at the end of line 2. Write the function `int bestLapIndex()`.
+1. What happens when you press button A once, and then again?
+2. What happens on line 2 when you press button B while the stopwatch is running?
+3. Stop the stopwatch, then press A again. Does it start from zero or continue?
+4. What happens when you hold B for 1 second while stopped? What happens while running?
+5. If the LCD's power wire is disconnected, does the stopwatch still count? How could you check?

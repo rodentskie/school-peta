@@ -177,8 +177,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. The cursor is at 0 and the brush is red. Describe the canvas after the input `xddbxaaagx` (cursor movement wraps around).
-2. Explain the difference between the **model** (`canvas[]`) and the **view** (`render()`). Why does rotation only change `offset`?
-3. Calculate the inverted color of orange `#FF6000`. Show the work in hexadecimal.
-4. Why is `(cursor + NUM − 1) % NUM` used for moving left instead of `cursor − 1`?
-5. Add an **undo** command `z` that restores the canvas before the last paint/erase/fill/clear/invert action. What is the simplest data structure for one level of undo, and how much RAM does it need?
+1. Right after the simulation starts, which pixels are lit? Where is the cursor and how can you see it?
+2. Send `dddx`. What happens on the ring? Now send `bdx`. What changes?
+3. Send `f`, then `c`. What does the ring show after each command?
+4. Send `R`. What happens to the picture? Does the picture change or only move?
+5. If the ring's Input wire is moved from D6 to D5, what will happen when you send commands? Will the Serial Monitor still answer?

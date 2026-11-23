@@ -157,8 +157,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Convert the decimal numbers 6, 11 and 15 to 4-bit binary and list which LEDs (D4–D7) will be ON for each.
-2. Explain the expression `(value + d + 16) % 16`. Why is `+ 16` needed when `d = -1`?
-3. Why does the UP button add 1 on **release** instead of on **press**? What bug would appear with the long-press reset if it acted on press?
-4. The `Button` structure is passed by reference (`Button &b`). What would go wrong if it were passed by value (`Button b`)?
-5. Extend the counter to 8 bits using 8 LEDs. Which parts of the code must change, and what is the new maximum value?
+1. What happens to the 4 LEDs each time you press and release the UP button?
+2. What happens when all 4 LEDs are on and you press UP once more?
+3. What happens when you **hold** the DOWN button for a few seconds? What happens when you hold UP for more than 1.5 seconds?
+4. What will happen to the LED on D6 if its resistor is removed? Can you still read the number correctly?
+5. If the LEDs on D4 and D7 are swapped on the breadboard, what will the LEDs show after the first UP press?

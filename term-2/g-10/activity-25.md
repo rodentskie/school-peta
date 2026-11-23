@@ -163,8 +163,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Events happen at t = 1.0 s, 4.0 s, 7.5 s, 8.0 s and 9.2 s. At which event does the alarm start? Show the window count at each event.
-2. Explain the difference between a **sliding** window and a **fixed** window (e.g. counting events in 0–5 s, then 5–10 s). Give an example where a fixed window would miss a theft.
-3. Why is the ring buffer size (8) larger than the trigger count (3)? What would happen if it were only 3?
-4. What does `events[i] != 0` protect against in `countInWindow()`? Is there a rare case where it could be wrong?
-5. Add a **sensitivity** setting using a potentiometer on A0 that changes `TRIGGER_COUNT` between 2 and 6. Write the code and explain how the user would know which value is set.
+1. What happens when you tilt the sensor once?
+2. What happens when you tilt it three times quickly? What happens if you tilt it three times slowly, more than 5 seconds apart?
+3. How can you stop the alarm before the 10 seconds are over?
+4. What happens after the alarm finishes by itself?
+5. If the tilt sensor's wire to D2 is disconnected, what happens? Would a thief be detected?

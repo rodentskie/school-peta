@@ -196,8 +196,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Why is the whole sequence created at the start of the game instead of adding a new random color each round? What difference would the player notice?
-2. Calculate the flash time at levels 1, 5, 10 and 15.
-3. `waitForButton()` waits for the **release** before returning. What bug would appear if it returned on press only?
-4. This game uses `delay()` but earlier activities avoided it. Why is `delay()` acceptable here? What feature would be hard to add because of it?
-5. Add a **"replay"** feature: if the player holds the RED and BLUE buttons together for 1 s during the input phase, the current sequence is shown again (only once per game). Describe your solution.
+1. What happens on the LEDs at the start of a new game?
+2. What happens when you repeat the sequence correctly? What happens when you press a wrong button?
+3. What happens if you wait too long before pressing a button?
+4. Does the game change as the level goes up? How can you tell?
+5. What will happen if the green LED's resistor is removed? Can you still play the game?

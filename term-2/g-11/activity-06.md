@@ -186,8 +186,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. In ramp mode, how long does the motor take to go from 30 % to 80 %? What PWM value is sent at 80 %?
-2. The motor runs at 60 %. The operator sends `x`, then `5`, then `0`, then `u`, then `7`. Write what the program prints after each character.
-3. Why does the `-` command jump to 0 % when the result would be below 25 %, instead of rounding up to 25 % like `setTarget()`?
-4. Explain the role of the flyback diode and the transistor. Why can't the motor be connected directly to D9?
-5. Add a **timer** command `t`: the motor runs at the current target for 10 s and then ramps down to 0 % automatically. Write the code and describe how it interacts with `x`.
+1. Send `9`. Does the motor reach full speed instantly? Now send `m` and then `3`. What is the difference?
+2. Send `1`. What speed does the motor actually use? What does the Serial Monitor say?
+3. While the motor is running, send `x`. What happens to the motor and the LED?
+4. After `x`, send `5`. What happens? What do you need to send to make the motor run again?
+5. What could happen if the diode is removed? What could happen if the motor is connected directly to D9 without the transistor?

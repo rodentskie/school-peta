@@ -230,8 +230,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Evaluate these by hand using the program's two-pass method, and show the arrays after pass 1: (a) `8+6/2`  (b) `20-3*4+1`  (c) `7/2*2`.
-2. Why does `7/2*2` give 6 on this calculator? What would a calculator using `float` show?
-3. What is the largest value a `long` can hold on the Arduino Uno? What happens if a result is bigger?
-4. Explain why `evaluate()` works on **copies** (`n[]`, `o[]`) of the arrays instead of changing `nums[]` and `ops[]` directly.
-5. Add a **backspace** function on the `*` key (short press deletes the last character, long press clears everything). Which variables must be updated when the last character is a digit, and which when it is an operator?
+1. What appears on the LCD as you press keys? What happens when you press `#`?
+2. Type `12 A 3 C 4 #` (12+3×4). What result does the LCD show? Is it the same as a phone calculator?
+3. What happens when you divide a number by zero?
+4. After a result is shown, what happens if you press a digit? What happens if you press an operator key?
+5. If the SDA and SCL wires of the LCD are swapped, what do you think the LCD will show?

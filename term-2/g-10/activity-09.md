@@ -149,8 +149,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. The TMP36 outputs 750 mV. Calculate the temperature in °C and °F. What `analogRead()` value would you expect?
-2. Why is `muteUntil` compared using `(long)(muteUntil - now) > 0` instead of `muteUntil > now`?
-3. Explain why the mute is cancelled when the level drops below 2. What safety problem would happen if it were not?
-4. Why is it better to light **only one** LED for the current level rather than a bar graph in this application?
-5. Add **hysteresis** of 1 °C to the HOT level (alarm turns on at 35.0 °C but only off below 34.0 °C). Write the new code for calculating `level`.
+1. Which LED is on at room temperature? While you raise the temperature slider, when do the yellow and red LEDs turn on?
+2. What do you see and hear when the temperature goes above 35 °C?
+3. During the alarm, what happens when you hold the button for more than 1 second? What happens with a quick press?
+4. What do you think will happen if the temperature sensor is connected backwards (5V and GND swapped)?
+5. If the buzzer is removed from the circuit, which warnings still work?

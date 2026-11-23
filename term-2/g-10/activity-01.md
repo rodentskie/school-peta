@@ -186,8 +186,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Why does the program use `millis()` instead of `delay()` while waiting for the player? What would go wrong with false-start detection if `delay(hiddenDelay)` were used?
-2. Explain what `INPUT_PULLUP` does. Why does a pressed button read `LOW` in this circuit?
-3. In `buttonPressed()`, what problem happens if the debounce check is removed? Describe what the player would see.
-4. The statement `if (bestTime == 0 || rt < bestTime)` uses `0` as a special value. Suggest another way to show that no record exists yet.
-5. Change the program so the round only counts if the reaction is faster than 1000 ms, and add a "streak" counter for consecutive "Good or better" results. Write the lines you would add.
+1. What happens to the LED and the buzzer when you press the button **before** the LED turns on?
+2. What happens if you do not press the button for more than 3 seconds after the LED turns on?
+3. What will happen to the LED if you remove its resistor? Why is the resistor needed?
+4. If the wire from the button to D2 is disconnected, can you still start the game? Explain why.
+5. If you turn the LED around (swap its two legs), what will you see when the LED is supposed to light up?

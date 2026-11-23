@@ -189,8 +189,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. What is the difference between `EEPROM.write()` and `EEPROM.update()`? Why does it matter that EEPROM cells can only be written about 100,000 times?
-2. A fresh (erased) EEPROM byte reads **255**. Explain how the program protects itself against this value.
-3. The slew limit is 1.2° per 20 ms. How long does the servo take to move from 10° to 150° in RECALL mode?
-4. Compare **exponential smoothing** with the **slew-rate limit**. Describe how the servo motion looks different for each one when the target jumps from 0° to 180°.
-5. Add a fourth action: holding **both** buttons for 2 seconds clears all slots to 90°. Write the code for this feature.
+1. What happens to the servo when you turn the potentiometer? Does it move smoothly or jump?
+2. What does the LED do after you press the SAVE button? Does it change after each save?
+3. What happens when you press RECALL? Does the servo follow the knob again afterwards? When?
+4. If you stop and restart the simulation, are the saved positions still there? Why?
+5. If the servo's power wire is disconnected, what happens when you turn the knob?

@@ -170,8 +170,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. The screen is empty. The user sends `ABCDEFGHIJKLMNOPQRST`. What is on line 1 and line 2, and where is the cursor?
-2. Then the user sends `|Bye|`. Draw the screen after each character. When does the scroll happen?
-3. Why is it a good idea to keep a buffer copy of the screen instead of only writing directly to the LCD?
-4. Why is the size of each row in the buffer **17** and not 16?
-5. Add **word wrap**: when a word would be cut at the end of line 1, move the whole word to line 2. Describe the algorithm (Hint: search backwards for a space in the current row).
+1. What does the LCD show right after the simulation starts?
+2. Type a long sentence of more than 32 characters and send it. What happens when the text reaches the end of line 2?
+3. Send `<` a few times. What happens to the text and the cursor? Send `#`. What happens?
+4. Send `^` and then `~`. What changes on the LCD?
+5. If the LCD's SDA and SCL wires are swapped, what do you think the LCD will show? Will `@` still print the screen in the Serial Monitor?

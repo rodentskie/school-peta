@@ -179,8 +179,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Write the 8 bytes of custom character 2 in binary. What does it look like?
-2. Calculate `steps`, the number of full cells, and the partial character for distances of 37 cm, 120 cm and 250 cm.
-3. Why does the code avoid custom character slot 0 when printing text?
-4. Why is a median of 3 used here but a median of 5 in Activity 11? Discuss speed vs. reliability.
-5. Add a **"min distance memory"**: line 2 alternates every 2 s between the bar and `Min: xx.x cm` (the closest distance since start-up). Write the code changes.
+1. What happens to the bar on line 2 when the object moves farther away?
+2. What changes on the LCD when you press the button quickly?
+3. Hold the button for 1 second and then move the object. What happens? How do you go back?
+4. What does the LCD show when the object is out of range?
+5. If the Echo wire is disconnected, what will the LCD show? Why?

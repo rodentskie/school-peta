@@ -179,8 +179,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Explain why `(remainingMs + 999) / 1000` shows "3" when 2,400 ms are left. What would plain `remainingMs / 1000` show?
-2. Why is it more accurate to use an **end time** than to count `delay(1000)` steps? Give a reason based on how long other code in the loop takes.
-3. Describe exactly what happens to `endTime` and `remainingMs` when the user pauses for 5 seconds and then resumes.
-4. Why does the long-press check come **before** the state handling in `loop()`?
-5. Extend the timer to 0–99 seconds using **two** displays (or show tens and units alternately on one display). Explain how you would split a number into tens and units.
+1. What does the display show when you turn the potentiometer before starting?
+2. What happens after you press the button once? What happens when you press it again while counting?
+3. What do you hear during the last 3 seconds and when the timer reaches zero?
+4. What happens when you hold the button for more than 1 second?
+5. If the potentiometer's wire to A0 is disconnected, what do you think the display will show before starting?

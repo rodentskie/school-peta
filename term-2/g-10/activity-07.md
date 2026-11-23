@@ -159,8 +159,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Using the table, calculate R, G, B for hue = 30°, 120°, 200° and 300° at 100 % brightness.
-2. Why is `(long)` used in `(long)(h % 60) * 255 / 60`? What could go wrong on an Arduino Uno if it were removed? (Hint: what is the size of `int`?)
-3. What color do you see at hue = 60° and at hue = 180°? Explain using additive color mixing.
-4. Why does the program only print when the hue changes by 5° or more?
-5. Add a **saturation** control: a second press type (double press) cycles saturation between 100 %, 60 % and 30 %. How does saturation change the formula? (Hint: a white part is added to every channel.)
+1. What colors does the RGB LED show as you turn the knob from one end to the other?
+2. What changes each time you press the button quickly?
+3. What happens when you hold the button for more than 1 second? Does the knob still work after that?
+4. If the wire to the blue leg (D11) is disconnected, which colors can the LED still show? Which colors are missing?
+5. What will happen to the RGB LED if the resistor on the common (cathode) leg is removed?

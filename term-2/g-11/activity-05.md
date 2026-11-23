@@ -205,8 +205,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. In MANUAL mode with the light GREEN, the operator sends `r` and then, 1 s later, `g`. Describe exactly what happens and what is printed.
-2. Why are safety interlocks enforced **in the program** and not left to the operator? Give a real-world example.
-3. Explain the purpose of `prevMode`. What would happen if the program always returned to NORMAL after an emergency?
-4. The function `setLight()` is the only place where LEDs are changed. Why is this a good design?
-5. Add a new interlock: in MANUAL mode, the light may not stay **green longer than 60 s**. After that, the program automatically changes to red (through yellow) and prints a warning. Write the code.
+1. What do the lights do in NORMAL mode without any command?
+2. Send `f`. What changes? Send `r` while in this mode. What does the Serial Monitor say?
+3. Send `m`, then `g`, then `r`. Does the light go straight from green to red? Describe what you see.
+4. In MANUAL mode with the light red, send `g` immediately. What happens? What happens if you wait a few seconds and send `g` again?
+5. Send `e`. What do you see and hear, and what happens after 10 seconds? If the red LED's resistor is removed, what would drivers see during an emergency?

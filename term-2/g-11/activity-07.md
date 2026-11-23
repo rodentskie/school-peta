@@ -184,8 +184,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Write the segment byte (binary) for the letters **H** (b c e f g) and **P** (a b e f g).
-2. Convert these characters to their value using the program's rules: `'7'`, `'B'`, `'E'`. Show the calculation with ASCII codes (`'0'` = 48, `'A'` = 65).
-3. Why must hex letters be sent in uppercase in this program? Suggest another command design that would allow lowercase hex letters.
-4. Explain how the segment test runs without `delay()`. Why does it use `return` in `loop()`?
-5. Add a command `>` that **shifts in** a hex digit: the display shows a "scrolling" 2-digit value (e.g. sending `>3 >A` prints `3A = 58`). Describe the variables and output.
+1. Send `7`, then `A`, then `F`. What does the display show for each one?
+2. Send `a` (lowercase). What happens? Why?
+3. Send `u`. What does the display do? What happens when it reaches `F`? What changes when you send `d`?
+4. Send `t`. Describe what the display does. Which segment lights first?
+5. What will happen to the display if the resistor on the common pin is removed? If the wire to segment a (D2) is disconnected, which digits will look wrong?

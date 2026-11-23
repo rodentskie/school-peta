@@ -42,7 +42,7 @@ Build a measuring station that only reports when it is **asked**, like a laborat
 ## Solution
 
 * **Sensor functions:** `readTemp()`, `readLight()` and `readDist()` each return one measurement. `readDist()` returns −1 for no echo.
-* **Min/max structure:** `struct Range { float lo, hi; bool valid; }` with `addSample(range, v)`. A function used for all three sensors avoids repeating code.
+* **Min/max structure:** `struct Range { float lo, hi; bool valid; }` with the member functions `add(v)` and `print(name, digits)`. One structure is used for all three sensors, so no code is repeated.
 * **One report function** `report(bool t, bool l, bool d)` reads the requested sensors, updates min/max, and prints in the selected format. Single-sensor commands call it with only one flag set. In CSV mode, sensors that were not requested are left empty.
 * **Auto-report** with `millis()` and `intervalMs`.
 
@@ -74,10 +74,27 @@ const int TRIG_PIN = 7;
 const int ECHO_PIN = 6;
 const int LED_PIN = 8;
 
+// Tinkercad-compatible: helpers are member functions, so the auto-prototype
+// step never references Range before it is declared.
 struct Range {
   float lo;
   float hi;
   bool valid;
+
+  void add(float v) {
+    if (!valid) { lo = hi = v; valid = true; return; }
+    if (v < lo) lo = v;
+    if (v > hi) hi = v;
+  }
+
+  void print(const char *name, int digits) {
+    Serial.print(name);
+    if (!valid) { Serial.println(": no data"); return; }
+    Serial.print(": min ");
+    Serial.print(lo, digits);
+    Serial.print("  max ");
+    Serial.println(hi, digits);
+  }
 };
 Range rT = {0, 0, false}, rL = {0, 0, false}, rD = {0, 0, false};
 
@@ -87,12 +104,6 @@ unsigned long intervalMs = 2000;
 unsigned long lastAuto = 0;
 float threshold = 30.0;
 float lastTemp = 0;
-
-void addSample(Range &r, float v) {
-  if (!r.valid) { r.lo = r.hi = v; r.valid = true; return; }
-  if (v < r.lo) r.lo = v;
-  if (v > r.hi) r.hi = v;
-}
 
 float readTemp() {
   long s = 0;
@@ -119,9 +130,9 @@ float readDist() {
 void report(bool wantT, bool wantL, bool wantD) {
   float t = 0, d = -1;
   int l = 0;
-  if (wantT) { t = readTemp(); lastTemp = t; addSample(rT, t); }
-  if (wantL) { l = readLight(); addSample(rL, l); }
-  if (wantD) { d = readDist(); if (d >= 0) addSample(rD, d); }
+  if (wantT) { t = readTemp(); lastTemp = t; rT.add(t); }
+  if (wantL) { l = readLight(); rL.add(l); }
+  if (wantD) { d = readDist(); if (d >= 0) rD.add(d); }
 
   if (csv) {
     Serial.print(millis() / 1000.0, 1);
@@ -145,15 +156,6 @@ void report(bool wantT, bool wantL, bool wantD) {
     }
     Serial.println();
   }
-}
-
-void printRange(const char *name, Range &r, int digits) {
-  Serial.print(name);
-  if (!r.valid) { Serial.println(": no data"); return; }
-  Serial.print(": min ");
-  Serial.print(r.lo, digits);
-  Serial.print("  max ");
-  Serial.println(r.hi, digits);
 }
 
 void help() {
@@ -185,9 +187,9 @@ void handle(char c) {
     else Serial.println("Text mode");
   }
   else if (c == 'm') {
-    printRange("Temp C ", rT, 1);
-    printRange("Light  ", rL, 0);
-    printRange("Dist cm", rD, 1);
+    rT.print("Temp C ", 1);
+    rL.print("Light  ", 0);
+    rD.print("Dist cm", 1);
   }
   else if (c == 'z') {
     rT.valid = rL.valid = rD.valid = false;
@@ -229,8 +231,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Write the exact output (text mode) for the command `a` if T = 23.46 °C, light = 512 and there is no echo. Then write the CSV line for the same values at time 12.3 s.
-2. Why is the `Range` structure passed **by reference** to `addSample()`? What would happen if it were passed by value?
-3. Why should an instrument only send data when asked (polling) in some situations, and continuously (auto-report) in others? Give one example of each.
-4. The LED uses `lastTemp`. When is this value updated? What problem could happen if temperature is never requested?
-5. Add a command `s` that prints a **sparkline** of the last 10 temperature readings using the characters `_ . - ^` for four levels between min and max. Describe the data you must store.
+1. Send `t`, `l` and `u` one at a time. What does each one show?
+2. Send `r`. What happens in the Serial Monitor? Send `5` and then `1`. What changes?
+3. Send `c`, then `a`. How does the output look different from text mode?
+4. Raise the temperature slider above 30 °C and send `t`. What does the LED do? What happens to the LED if you send `>` several times?
+5. If the 1 kΩ resistor of the light sensor is removed, what light values would you expect? If the Echo wire is disconnected, what does `u` show?

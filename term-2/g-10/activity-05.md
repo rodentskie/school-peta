@@ -121,8 +121,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. The ADC returns a value from 0 to 1023. Calculate the voltage for raw readings of 205, 512 and 900.
-2. Why do we add `0.5` before converting `volts` to `int`? What would the level be for 2.7 V with and without the `+ 0.5`?
-3. Explain why averaging 8 samples makes the bar steadier. What is the disadvantage of averaging 100 samples instead?
-4. Trace the value of `peak` if the knob goes quickly from 5 V to 0 V. How long does it take until the peak LED disappears?
-5. Change the meter so that LED 5 also blinks as a warning whenever the voltage is above 4.5 V. Write the lines you would add.
+1. What happens to the LEDs as you slowly turn the potentiometer from one end to the other?
+2. Turn the knob quickly to the maximum and then back to the minimum. What does the top LED do?
+3. How many LEDs are on when the knob is in the middle position?
+4. If the wire from the potentiometer's middle pin (wiper) to A0 is disconnected, what do you think the LEDs will do?
+5. If the 5V and GND wires of the potentiometer are swapped, what changes when you turn the knob?

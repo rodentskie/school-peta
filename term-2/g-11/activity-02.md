@@ -162,8 +162,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Which preset digit gives **cyan**? Explain your answer using the bits of the digit.
-2. Calculate the gamma-corrected output for logical values 32, 128 and 224. Why do the low values change the most?
-3. The color is `#40C0FF`. Write the decimal R, G, B values, then the result after the command `c`.
-4. Why does the program store the marker `0xA5` in EEPROM? What would `l` load on a new Arduino without it?
-5. Add a command `f` that makes the LED **fade smoothly** from black to the current color in 1 second without using `delay()`. Describe the variables you need.
+1. Send `R` four times. What happens to the RGB LED each time? What happens when you keep sending `R` after the red is already at maximum?
+2. Send each digit from `0` to `7`. Which color appears for each one?
+3. Send `3` and then `c`. What color do you see before and after?
+4. Send `m`, stop the simulation, start it again and send `l`. What color appears? Why?
+5. What will happen to the RGB LED if the resistor on the common (cathode) leg is removed? What happens if the wire to the green leg (D10) is disconnected?

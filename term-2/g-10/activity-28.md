@@ -230,8 +230,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. How many bytes of RAM does the `song` array use? (A `byte` is 1 byte and an `unsigned int` is 2 bytes on the Uno.) Why does this matter on an Arduino Uno with 2 KB of RAM?
-2. Why is the start time stored **relative** to `recStart` instead of as the raw `millis()` value?
-3. Explain why the piano is **monophonic**. What would you need to change (hardware and software) to play two notes at the same time?
-4. Trace `playIdx` and `playSounding` during playback of the demo song for t = 0, 250, 300, 400 and 700 ms.
-5. Add a **tempo** control: a potentiometer on A0 changes the playback speed from 0.5× to 2× without changing the recorded data. Write the new condition for starting and stopping each note.
+1. What do you hear right after the simulation starts?
+2. What happens when you press and hold a note button? What happens if you press two note buttons at the same time?
+3. How do you record a melody? What does the LED do while recording?
+4. What happens when you hold the FUNCTION button for 1 second?
+5. If the wire from the E button to D3 is disconnected, what happens when you press it? Can the other notes still be recorded?

@@ -163,8 +163,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. At 60 °/s, how many degrees can the servo move in one 20 ms update? How long does it take to move from 0° to 180°?
-2. The servo is at 175° and the user sends `D`. What does the program print and do? What about `DD` from 100°?
-3. Why is `pos` a `float` while `target` is an `int`? What would go wrong if `pos` were an `int` at 15 °/s?
-4. Explain why limiting the slew rate protects real robot arms and their gears.
-5. Add **position memory** with 3 slots. The digit keys are already used, so choose new keys (for example `m` = store into the next slot, `!` `@` `#` = recall slot 1–3). Explain your choice and write the code for storing and recalling positions.
+1. Send `D` three times. How does the servo move? Does it jump or move smoothly?
+2. Send `9`, then `0`. What does the LED do while the servo is moving and after it arrives?
+3. The servo is at 180°. What happens when you send `D` again? What do the LED and Serial Monitor show?
+4. Send `w`, then `+` and `-` a few times. What changes in the servo's movement?
+5. If the servo's signal wire is disconnected from D9, what happens when you send commands? Does the Serial Monitor still say the servo is moving?

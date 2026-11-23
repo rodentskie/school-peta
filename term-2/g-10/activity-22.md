@@ -171,8 +171,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. A NeoPixel color is stored as a 32-bit number. What hexadecimal value does `ring.Color(255, 128, 0)` produce? (Format: `0x00RRGGBB`.)
-2. Calculate the brightness of the 6 comet pixels (`d` = 0 … 5) using `255 >> (int)(d * 1.5)`.
-3. Each NeoPixel draws up to 60 mA at full white. What is the maximum current of the 12-LED ring? Why is `setBrightness()` important when powering it from USB?
-4. Why is each animation written as a function that draws **one frame** instead of a loop with `delay()`? What feature would break otherwise?
-5. Create a fifth mode, **"Twinkle"**: each frame, one random pixel lights in a random color and all pixels fade by 20 %. Write the frame function.
+1. Describe each of the 4 animations on the ring.
+2. What happens to the animation when you turn the potentiometer?
+3. What happens when you hold the button for more than 1 second?
+4. If the ring's Input wire is moved from D6 to D5, what will happen to the ring?
+5. What happens to the ring if its power wire is disconnected?

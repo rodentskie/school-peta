@@ -233,8 +233,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. How many different 4-digit codes are possible? With 3 attempts every 30 seconds, how long would it take in the worst case to try them all?
-2. Explain why the digits are displayed as `*`. Name one other security weakness of this lock that a real product should fix.
-3. Why does the program store the marker value **42** at EEPROM address 4? What would happen on a brand-new Arduino without it?
-4. Trace the values of `mode`, `input` and `newCode` when a user presses: `A 2 5 8 0 # 1 1 1 1 # 1 1 1 1 #`.
-5. Add an **alarm**: after 2 lockouts in a row, the red LED stays on and the lock can only be reset by holding `D` for 3 seconds. Explain which variables and checks you need.
+1. What happens to the servo and the green LED when you type the correct code and press `#`?
+2. What happens when you type a wrong code? What happens after 3 wrong codes in a row?
+3. Does the Serial Monitor show the digits you type? What does it show instead?
+4. What happens 5 seconds after the door opens?
+5. If the servo is disconnected, will the Serial Monitor still say ACCESS GRANTED? Is the door really open? Why is this a problem?

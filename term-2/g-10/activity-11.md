@@ -173,8 +173,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. The echo pulse lasts 2,915 µs. Calculate the distance in cm. Show your working.
-2. Why is the measured time divided by 2?
-3. Five readings are 42.1, 41.8, 250.0, 42.4 and 41.9 cm. Calculate the **average** and the **median**. Which value is better, and why?
-4. What does the third parameter `30000` in `pulseIn()` do? What would happen without it when nothing is in front of the sensor?
-5. Sound travels faster in warm air (`v ≈ 331.3 + 0.606 × T` m/s). Explain how you could add a TMP36 to correct the distance, and write the new distance formula.
+1. What happens to the LEDs and the buzzer as you move the object closer to the sensor?
+2. How is the beeping different in the yellow zone and in the red zone?
+3. What happens when the object is very close (less than 20 cm)?
+4. What happens when the object is moved out of the sensor's range?
+5. If the Trigger and Echo wires are swapped, what do you think the LEDs will show? Why?

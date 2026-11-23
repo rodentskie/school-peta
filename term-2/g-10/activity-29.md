@@ -198,8 +198,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Calculate the mean and standard deviation of the temperatures 22, 23, 23, 24, 28 (°C). Is 28 an anomaly using the "2 standard deviations" rule?
-2. Why does the program check for an anomaly **before** adding the new value to the buffer?
-3. What does CSV stand for? Explain how you could copy the Serial Monitor output into a spreadsheet and draw a graph.
-4. The statistics are calculated on the **stored** samples, which may not be in time order because of the ring buffer. Does the order matter for min, max, mean and standard deviation? Explain.
-5. Add a third statistic, the **trend** (°C per minute), using the first and last samples in time order. Explain how to find the oldest sample in the ring buffer when it is full.
+1. What appears in the Serial Monitor every second?
+2. Change the temperature slider suddenly by a big amount. What message appears, and what does the LED do?
+3. What happens when you press the button quickly? What happens when you hold it?
+4. What does the LED do when nothing special is happening?
+5. What happens to the light value when the sensor gets dark? What would you expect if the light sensor's 1 kΩ resistor were removed?

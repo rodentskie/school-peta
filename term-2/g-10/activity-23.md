@@ -191,8 +191,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. If 13.75 s of a 25 s work phase have passed, calculate `p`, the number of full pixels, and the brightness (0–255) of the leading pixel.
-2. Explain how the variables `accumulated`, `runStart` and `running` work together to support pausing. Trace them for: start → 4 s → pause → 3 s → resume → 2 s.
-3. In the real Pomodoro technique, how long does one full cycle of 8 phases last (in minutes)? What single change to the code makes the timer run in real minutes?
-4. The `chime()` function uses `delay()`. Why is this acceptable here, but `delay()` inside `drawProgress()` would not be?
-5. Add a **"skip"** feature: double-pressing the button (two presses within 400 ms) jumps to the next phase immediately. Describe how to detect a double press without confusing it with a single press.
+1. What happens to the ring during the WORK phase? Which color does it use?
+2. What happens when the work phase ends? What color comes next?
+3. What does the ring do when you press the button once? What happens when you press it again?
+4. What happens when you hold the button for 1 second?
+5. If the buzzer is disconnected, how would the user know that the phase has changed?

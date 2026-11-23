@@ -180,8 +180,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. The pattern is `0b0110`. Write the result after each command: `1`, `i`, `<`, `>`, `>`.
-2. Explain why `& 0x0F` is needed after `~leds`. What would the value be without it?
-3. Show step by step how rotate-left changes `0b1001` using `(leds << 1) | (leds >> 3)`.
-4. Why is `while (Serial.available() > 0)` used instead of `if`? What happens when the user sends `1234` in one line?
-5. Add a command `m` that **mirrors** the pattern (bit 0 ↔ bit 3, bit 1 ↔ bit 2). Write the code using a loop and bit operations.
+1. Send `1`, then `3`. Which LEDs are on? What happens when you send `1` again?
+2. Send `a`, then `i`. What do the LEDs do after each command?
+3. Send `k`, then `+` a few times. What changes? What happens to the animation when you send `2`?
+4. What happens when you send several characters in one line, for example `1234`?
+5. What will happen to the LED on D6 if its resistor is removed? Will the other LEDs still follow the commands?

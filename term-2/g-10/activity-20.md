@@ -175,8 +175,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Draw the 5×8 dot pattern of `arrowUp` on grid paper. Then design and write the 8 bytes for a **degree symbol (°)**.
-2. With α = 0.1 and samples every 250 ms, how many samples does the average need to move about 90 % of the way to a new temperature? About how many seconds is that?
-3. Why does the trend use a **dead-band** of ±0.3 °C? What would the arrow do without it?
-4. Explain why the oldest entry in the ring buffer is the value from exactly 5 seconds ago.
-5. Add a third line of information by **alternating** line 2 every 3 seconds between `Lo/Hi` and the **average temperature of the last minute**. Describe the extra data structure you would need.
+1. What does the LCD show on line 1 and on line 2?
+2. Raise the temperature slider quickly. Which arrow appears? What is shown when the temperature stays the same?
+3. What happens to the LED when the temperature goes above 30 °C? Does it switch off exactly at 30 °C when cooling down?
+4. What does a short press of the button do? What does a long press do?
+5. If the wire from the sensor's middle pin (Vout) to A0 is disconnected, what do you think the LCD will show?

@@ -141,8 +141,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. With Kp = 0.02, calculate the step for errors of 50, 120, 300 and −600. Which ones are limited by `MAX_STEP`?
-2. What happens to the tracker's behaviour if Kp is (a) much smaller, e.g. 0.001, and (b) much larger, e.g. 0.5? Use the words *slow* and *oscillate* in your answer.
-3. Explain why the dead-band is needed, using the idea of sensor noise.
-4. How does the calibration offset make the tracker more accurate? What would happen if the calibration were done while one sensor is in a shadow?
-5. Real solar trackers often stop moving at night. Add a **night mode**: if both sensors read below 100 for more than 5 s, slowly return the servo to 90° and switch off the LOCK LED. Write the code.
+1. What happens to the servo when the left light sensor gets more light than the right one?
+2. When does the LOCK LED turn on?
+3. What happens when both sensors get the same amount of light?
+4. If the two light sensors swap places on the breadboard, what will the servo do?
+5. What will happen to the servo if the 1 kΩ resistor of the right light sensor is removed?

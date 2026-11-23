@@ -164,8 +164,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Calculate how long the motor takes to ramp from 0 to 255 PWM with a step of 2 every 20 ms.
-2. Explain the job of each part: (a) NPN transistor, (b) 1 kΩ base resistor, (c) flyback diode. What could happen if the diode were missing?
-3. Why does the E-STOP set `actual = 0` directly instead of letting the ramp slow the motor down?
-4. Describe a real-life accident that the "knob must return to zero" interlock prevents.
-5. Add a **stall detector**: if the target has been above 50 % for 3 s but the motor is "not turning" (simulate with a second button on D3), stop the motor and enter a new state `STALL`. Draw the updated state diagram.
+1. Turn the knob quickly to the maximum. Does the motor reach full speed instantly? Describe what happens.
+2. What happens when the knob is turned only a little (near the start)?
+3. What happens to the motor and the LED when you press the E-STOP button?
+4. After an E-STOP, the knob is still at maximum and you press the button again. Does the motor start? What must you do?
+5. What could happen if the diode is removed? What could happen if the motor is connected directly to D9 without the transistor?

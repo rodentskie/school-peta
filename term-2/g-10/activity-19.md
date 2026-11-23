@@ -219,8 +219,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Convert `secondsOfDay = 45296` to `HH:MM:SS`. Show your calculation.
-2. Explain why `lastTick += 1000` is better than `lastTick = millis()` for keeping accurate time. How much drift could the second method cause in one day if each loop takes 3 ms?
-3. Why does `increment()` for minutes rebuild `secondsOfDay` from h, m and s instead of just adding 60?
-4. The `millis()` clock of an Arduino can be wrong by about 0.5 %. How many minutes per day is that? What hardware module would fix it?
-5. Add a **snooze** function: pressing MODE while ringing stops the alarm but rings again after 5 minutes (only once). Which variables do you need?
+1. What happens about 10 seconds after the simulation starts?
+2. How can you stop the alarm?
+3. What happens on the LCD when you press MODE once? Which part blinks?
+4. What happens when you hold the INC button while setting the minutes?
+5. If you stop and restart the simulation, what time does the clock show? Why does a real clock need a battery or an RTC module?

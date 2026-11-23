@@ -165,8 +165,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Using the timing rules, calculate the total time (in ms) needed to send the word `SOS`, including the letter gaps.
-2. Explain why the expression `(long)(now - nextAt) < 0` is safer than `now < nextAt` when `millis()` overflows after about 49 days.
-3. Why is the transmitter called **non-blocking**? Describe what would go wrong with a version that uses `delay()` while the user types new text.
-4. The table index for a digit is `26 + (c - '0')`. What index does `'7'` get, and what code is stored there?
-5. Add a Serial command `#SPEED n` that changes `UNIT` to `n` milliseconds. What must you change so that `UNIT` can be modified while the program runs?
+1. What do you see and hear right after the simulation starts?
+2. How can you tell the difference between a dot and a dash just by watching the LED?
+3. What happens if you type a new word while the Arduino is still sending a message?
+4. What happens when you type a symbol that is not a letter or number, like `?` or `@`?
+5. What will happen to the LED if its resistor is removed? Will the buzzer still work?

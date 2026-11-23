@@ -162,8 +162,8 @@ void loop() {
 
 ## Assessment Questions
 
-1. Draw the state diagram of this controller. Label each arrow with its condition (time or button).
-2. Why is `walkRequested` cleared inside `enterState(WALK)` and not when the button is pressed?
-3. Explain how `t % 400 < 200` makes the LED flash without using a second timer.
-4. What would happen if `MIN_GREEN_MS` were 0 and many people pressed the button repeatedly? Why is a minimum green time important in real traffic systems?
-5. Modify the program so that **holding** the button for 3 seconds starts an "emergency vehicle" mode: all lights red and the buzzer sounds continuously until the button is pressed again. Which new state(s) and transitions do you need?
+1. What do the car lights do when nobody presses the button?
+2. Describe what happens to all the lights and the buzzer, in order, after a pedestrian presses the button.
+3. What happens if the button is pressed again while the WALK light is already on?
+4. What will happen to the red LED if its resistor is removed? Will the other LEDs be affected?
+5. If the buzzer is disconnected, does the crossing still work? Who would be affected in real life?
